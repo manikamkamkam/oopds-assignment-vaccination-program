@@ -1,0 +1,12 @@
+[
+  {
+    "name": "MMU PPV",
+    "capacityPerHour": 2,
+    "capacityPerDay": 3
+  },
+  {
+    "name": "KLIA PPV",
+    "capacityPerHour": 5,
+    "capacityPerDay": 3
+  }
+]

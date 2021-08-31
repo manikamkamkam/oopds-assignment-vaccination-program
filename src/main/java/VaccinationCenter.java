@@ -1,13 +1,14 @@
-import org.json.simple.parser.ParseException;
-
 import java.io.IOException;
 
-public class VaccinationCenter extends MinistryOfHealth {
+public class VaccinationCenter {
     private String name;
-    private long capacityPerHour;
-    private long capacityPerDay;
+    private int capacityPerHour;
+    private int capacityPerDay;
 
-    VaccinationCenter(String name, long capacityPerHour, long capacityPerDay) throws IOException, ParseException {
+    VaccinationCenter() {
+    }
+
+    VaccinationCenter(String name, int capacityPerHour, int capacityPerDay) throws IOException {
         this.name = name;
         this.capacityPerHour = capacityPerHour;
         this.capacityPerDay = capacityPerDay;
@@ -17,11 +18,11 @@ public class VaccinationCenter extends MinistryOfHealth {
         return name;
     }
 
-    public long getCapacityPerHour() {
+    public int getCapacityPerHour() {
         return capacityPerHour;
     }
 
-    public long getCapacityPerDay() {
+    public int getCapacityPerDay() {
         return capacityPerDay;
     }
 }
