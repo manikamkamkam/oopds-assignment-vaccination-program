@@ -25,6 +25,16 @@ public class MinistryOfHealth {
             System.out.printf("%-20s | %-20s | %20d\n", recipient.getName(), recipient.getPhoneNumber(), recipient.getVaccinationStatus());
         }
     }
+    
+    public void printVaccinationCenterData(){
+        System.out.printf("%-20s | %-20s | %20s\n", "Center Name", "Total Capacity", "Number of Recipients with Completed Doses", "Number of Pending Recipients", 
+                          "Percentage of Completed Doses");
+        System.out.println("------------------------------------------------------------------");
+        for (VaccinationCenter vaccinationcenter : vaccinationcenter){
+            System.out.println("%20s | %-20s | %20d\n", vaccinationcenter.getName(), vaccinationcenter.getcapacityTotal(), vaccinationcenter.getNumberofCompletedRecipients(),
+                              vaccinationcenter.getPendingRecipients(), vaccinationcenter.getPercentageCompleted());
+        }
+    }
 
     public void searchRecipient(String name) {
         Recipient recipient = recipients.stream().filter(r -> name.equals(r.getName())).findAny().orElse(null);
@@ -70,7 +80,7 @@ public class MinistryOfHealth {
                 }
             }
         }
-
+    
 
        /* for (int i = 0; i < vaccinationCenters.size(); i++) {
             VaccinationCenter vc = vaccinationCenters.get(i);
